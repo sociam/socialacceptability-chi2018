@@ -1,0 +1,154 @@
+\documentclass{sigchi-ext}
+% Please be sure that you have the dependencies (i.e., additional
+% LaTeX packages) to compile this example.
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage[scaled=.92]{helvet} % for proper fonts
+\usepackage{graphicx} % for EPS use the graphics package instead
+\usepackage{balance}  % for useful for balancing the last columns
+\usepackage{booktabs} % for pretty table rules
+\usepackage{ccicons}  % for Creative Commons citation icons
+\usepackage{ragged2e} % for tighter hyphenation
+
+% Some optional stuff you might like/need.
+% \usepackage{marginnote} 
+% \usepackage[shortlabels]{enumitem}
+% \usepackage{paralist}
+% \usepackage[utf8]{inputenc} % for a UTF8 editor only
+
+%% EXAMPLE BEGIN -- HOW TO OVERRIDE THE DEFAULT COPYRIGHT STRIP --
+% \copyrightinfo{Permission to make digital or hard copies of all or
+% part of this work for personal or classroom use is granted without
+% fee provided that copies are not made or distributed for profit or
+% commercial advantage and that copies bear this notice and the full
+% citation on the first page. Copyrights for components of this work
+% owned by others than ACM must be honored. Abstracting with credit is
+% permitted. To copy otherwise, or republish, to post on servers or to
+% redistribute to lists, requires prior specific permission and/or a
+% fee. Request permissions from permissions@acm.org.\\
+% {\emph{CHI'14}}, April 26--May 1, 2014, Toronto, Canada. \\ }
+% Copyright \copyright~2014 ACM ISBN/14/04...\$15.00. \\
+% DOI string from ACM form confirmation}
+%% EXAMPLE END
+
+% Paper metadata (use plain text, for PDF inclusion and later
+% re-using, if desired).  Use \emtpyauthor when submitting for review
+% so you remain anonymous.
+\def\plaintitle{Social Acceptability and Respectful Smart Assistants} \def\plainauthor{William Seymour}
+\def\emptyauthor{}
+\def\plainkeywords{Respectful Behaviour; Social Acceptability; Smart Assistants; Dissonant Relationships}
+\def\plaingeneralterms{}
+
+\title{Social Acceptability and Respectful Smart Assistants}
+
+\numberofauthors{1}
+% Notice how author names are alternately typesetted to appear ordered
+% in 2-column format; i.e., the first 4 autors on the first column and
+% the other 4 auhors on the second column. Actually, it's up to you to
+% strictly adhere to this author notation.
+\author{%
+  \alignauthor{%
+    \textbf{William Seymour}\\
+    \affaddr{University of Oxford} \\
+    \affaddr{Oxford, UK} \\
+    \email{william.seymour@cs.ox.ac.uk} }}
+
+% Make sure hyperref comes last of your loaded packages, to give it a
+% fighting chance of not being over-written, since its job is to
+% redefine many LaTeX commands.
+\definecolor{linkColor}{RGB}{6,125,233}
+\hypersetup{%
+  pdftitle={\plaintitle},
+%  pdfauthor={\plainauthor},
+  pdfauthor={\emptyauthor},
+  pdfkeywords={\plainkeywords},
+  bookmarksnumbered,
+  pdfstartview={FitH},
+  colorlinks,
+  citecolor=black,
+  filecolor=black,
+  linkcolor=black,
+  urlcolor=linkColor,
+  breaklinks=true,
+}
+
+% \reversemarginpar%
+
+\begin{document}
+
+%% For the camera ready, use the commands provided by the ACM in the Permission Release Form.
+%\CopyrightYear{2007}
+%\setcopyright{rightsretained}
+%\conferenceinfo{WOODSTOCK}{'97 El Paso, Texas USA}
+%\isbn{0-12345-67-8/90/01}
+%\doi{http://dx.doi.org/10.1145/2858036.2858119}
+%% Then override the default copyright message with the \acmcopyright command.
+%\copyrightinfo{\acmcopyright}
+%\acmcopyright
+
+%\CopyrightYear{2018}
+\setcopyright{rightsretained}
+\conferenceinfo{CHI'18 Workshops: (Un)Acceptable!?! -- Re-thinking the Social Acceptability of Emerging Technologies}{April 21--26, 2018,
+	Montreal, QC, Canada}\isbn{}
+\doi{}
+
+\copyrightinfo{\acmcopyright}
+
+
+\maketitle
+
+% Uncomment to disable hyphenation (not recommended)
+% https://twitter.com/anjirokhan/status/546046683331973120
+\RaggedRight{} 
+
+% Do not change the page size or page settings.
+\begin{abstract}
+Underneath the friendly facade, do you feel like there is something sinister going on with Siri? This paper highlights some of the problems with modern smart assistants, particularly in the way that they construct a relationship with their users which is manifestly different to the technical and legal realities. The notion of \textit{respect} is offered as a means of conceptualising the types of interactions we might want with such devices in the future and identifying flaws in the current iteration of smart assistants.
+\end{abstract}
+
+\keywords{\plainkeywords}
+
+\category{H.5.m}{Information interfaces and presentation}{Misc}
+
+\section{Introduction}
+Many have described the constant surveillance which arises as a natural consequence of the Internet of Things (IoT) to be disconcerting. The leaking or exfiltrating of data by applications makes people feel vulnerable. In each individual case there are often ways to identify and correct the specific offending features that users find socially unacceptable, but is there an overarching theme? I believe that there is, and that this theme can be summarised as a lack of \textit{respect}.
+
+\section{Enter the Smart Assistant}
+Existing in their modern guise since 2011, smart assistants have unfortunately come to embody both of the undesirable points above. Products such as Google Home and Amazon Echo collect data from around the home, and send unknown telemetry back to their creators. Devices are anthropomorphised (e.g. by giving them names), and considerable effort has gone into making the relationship that users have with their assistants feel friendly and informal.
+
+\marginpar{%
+	\vspace{-45pt} \fbox{%
+		\begin{minipage}{0.925\marginparwidth}
+			\textbf{Possible Examples of Respectful Behaviour} \\
+			\vspace{1pc} \textbf{Voice activated devices} could offer the use of local processing models as well as those based in the cloud  \\
+			\vspace{1pc} \textbf{Sensors} might only record enough information to carry out their task (such as voice data garbled enough that one can only distinguish between speakers, and not discern what is being said). \\
+			\vspace{1pc} \textbf{Energy monitors} could, instead of reporting real time statistics that can identify individual household events (such as use of a washing machine), send back usage quantised to each tariff.
+	\end{minipage}}\label{sec:sidebar} }
+
+But the \textit{legal} relationship that users have with device makers is very different, and when this dissonance between perceived and actual relationships is brought to the fore its social unacceptability becomes apparent. Using the Alexa platform as an example, Amazon was issued a warrant in 2016 for audio recordings collected by an Echo unit in relation to a police investigation (which were subsequently released to law enforcement)\footnote{While the recordings were turned over with the permission of the device owner, Amazon did not need that permission in order to disclose the recordings to law enforcement.}. The event prompted concern as users began to realise that their assistants were not quite as they had been led to believe.
+
+These issues have arisen due to the fact that voice interfaces allow for interactions with smart devices which approach natural conversation in a way not possible before. For evidence of this, see the pop-culture references included with many current smart assistants in an attempt to simulate conversation between friends.
+
+Smart assistants \textit{could} be restored to a socially acceptable state by making their interfaces reflect the agreement with the device manufacturer (but this is unlikely). More plausibly, device behaviour could be changed to be more in line with the projected facade.
+
+\section{Respectful Behaviour}
+When we conceptualise respect, we think about adhering to boundaries (including laws and regulations), but we also think about acknowledging traits in another which \textit{demand} respect (including rights) and caring for others (supporting their long term goals) ~\cite{sep-respect}.
+
+But how might a \textit{machine} embody, or at least emulate, respect? Being transparent is an obvious starting point, but respectful behaviour could also be extended to include adherence to personal boundaries within the home or to the tailoring of functionality to user preferences; instead of issuing an ultimatum with respect to privacy (or rather, lack of), a device could offer to turn off specific functionality which required sending data outside of the home (see sidebar).
+
+%As assistants become increasingly sophisticated, being able to deal with multiple parties will be of increasing importance. In many household situations it is not obvious who should have access to what information through a smart assistant, or even who should have control of the device itself.
+
+\section{Conclusion}
+Modern smart devices marketed for the home are often perceived as creepy or unsettling, with a disconnect between the legal and technical relationships users have with their devices, and the relationship they believe they have. The notion of respect offers a way of conceptualising both the behaviour we might desire smart devices to possess, as well as highlighting the deficiencies in the products available today.
+
+\balance{} 
+
+\bibliographystyle{SIGCHI-Reference-Format}
+\bibliography{workshop}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
